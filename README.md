@@ -2,7 +2,7 @@
 
 #### extra: RegExp, not put in dynamic loading list
 #### name: String, dynamic script name(default version)
-#### insertAfter: String, the place to insert dynamic script, default in front of </body>
+#### insertAfter: String, the place to insert dynamic script, default in front of &lt;/body>
 #### priority: Array, dynamic loading by order in priority
 
 ##### poor English, example:
