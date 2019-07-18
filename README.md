@@ -12,7 +12,7 @@ const dynamicLoadingPlugin = require('file_path/dynamicLoadingPlugin.js');
 plugins: [
   new dynamicLoadingPlugin({
     extra: /chunk|hot-update/,
-    insertAfter: '<div id="root"></div>',
+    insertAfter: '&lt;div id="root"></div>',
     priority: ['mainfest']
   })
 ]
