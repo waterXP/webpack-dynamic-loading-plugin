@@ -1,6 +1,6 @@
 ### For webpack 3, used to dynamic loading javascripts and stylesheets, javascripts can loading by order
 
-#### extra: RegExp, not put in dynamic loading list
+#### extra: RegExp, do not put in dynamic loading list
 #### name: String, dynamic script name(default version)
 #### insertAfter: String, the place to insert dynamic script, default in front of &lt;/body>
 #### priority: Array, dynamic loading by order in priority
