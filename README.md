@@ -9,6 +9,7 @@
 ```
 // in webpack config
 const dynamicLoadingPlugin = require('file_path/dynamicLoadingPlugin.js');
+// ...
 plugins: [
   new dynamicLoadingPlugin({
     extra: /chunk|hot-update/,
