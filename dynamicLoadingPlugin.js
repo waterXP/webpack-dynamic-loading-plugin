@@ -9,7 +9,9 @@ class DynamicLoadingPlugin {
       insertAfter: options && options.insertAfter
         ? options.insertAfter : null,
       priority: options && options.priority && options.priority instanceof Array
-        ? options.priority : null
+        ? options.priority : null,
+      jsReg: options && options.jsReg || /\.js$/,
+      cssReg: options && options.cssReg || /\.css$/,
     };
   }
 
@@ -18,6 +20,8 @@ class DynamicLoadingPlugin {
     var name = this.options.name;
     const extra = this.options.extra;
     const insertAfter = this.options.insertAfter;
+    const jsReg = this.options.jsReg;
+    const cssReg = this.options.cssReg;
     const priority = this.options.priority;
     // add scripts by order
     const hasPriority = priority && priority.length;
@@ -69,9 +73,6 @@ class DynamicLoadingPlugin {
       }
 
       source += '  var elem;\n'
-
-      var jsReg = new RegExp(/\.js$/);
-      var cssReg = new RegExp(/\.css$/);
 
       // Loop through all compiled assets,
       // adding a new line item for each filename.
